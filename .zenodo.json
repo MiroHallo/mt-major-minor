@@ -1,0 +1,18 @@
+{
+  "title": "Major and Minor double-couple decomposition of non-double-couple earthquake source",
+  "description": "Codes for decomposition of non-double-couple moment tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction is preserved for both the major and minor double-couple MTs. The Python script can be used for plotting of the trinity of beach-balls.",
+  "creators": [
+    {
+      "name": "Hallo, Miroslav",
+      "affiliation": "Charles University", 
+	  "orcid": "0000-0001-5865-7767"
+    }
+  ],
+  "access_right": "open",
+  "license": "GPL-3.0-or-later",
+  "keywords": ["Seismology", "Earthquake", "Earthquake Source", "Visualization", "Decomposition", "Tectonics"],
+  "resource_type": {
+    "type": "software",
+    "title": "Software"
+  }
+}
