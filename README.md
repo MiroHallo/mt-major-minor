@@ -1,4 +1,4 @@
-# Major and Minor double-couple decomposition of arthquake source
+# Major and Minor double-couple decomposition of earthquake source
 Major and Minor double-couple decomposition preserving the dominant PT-axis
 ***************************************
 
