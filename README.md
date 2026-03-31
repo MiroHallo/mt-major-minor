@@ -24,10 +24,9 @@ Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://do
 
 Matrix Methods, Cross-Platform (Windows, Linux)
 
-### Software Archive
 The official software version is archived on Zenodo:
 
-[![DOI](https://zenodo.org)](https://doi.org/10.5281/zenodo.19342063)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19342063.svg)](https://doi.org/10.5281/zenodo.19342063)
 
 3 PACKAGE CONTENT
 ===================
