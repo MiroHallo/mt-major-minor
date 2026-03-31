@@ -12,6 +12,23 @@
   "access_right": "open",
   "license": "GPL-3.0-or-later",
   "keywords": ["Seismology", "Earthquake", "Earthquake Source", "Visualization", "Decomposition", "Tectonics"],
+  "related_identifiers": [
+    {
+      "scheme": "doi",
+      "identifier": "10.1186/s40623-017-0721-4",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1186/s40623-019-1016-8",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    }
+  ],
+  "version": "v1.2",
+  "publication_date": "2017-10-15",
+  "language": "eng",
   "upload_type": "software"
   }
 }
