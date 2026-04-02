@@ -2,7 +2,7 @@
 Major and Minor double-couple decomposition preserving the dominant PT-axis
 ***************************************
 
-  Open-source Matlab codes for decomposition of non-double-couple moment tensors (MTs) with
+  Codes for decomposition of non-double-couple moment tensors (MTs) with
 preserved dominant P- or T-axis. The dominant axis direction is preserved
 for both the major and minor double-couple MTs. The Python script can be used for
 plotting of the trinity of beach-balls.
@@ -49,7 +49,7 @@ The official software version is archived on Zenodo:
 5 COPYRIGHT
 ===================
 
-Copyright (C) 2017,2018  Miroslav Hallo
+Copyright (C) 2017,2018 Miroslav Hallo
 
 This program is published under the GNU General Public License (GNU GPL).
 
