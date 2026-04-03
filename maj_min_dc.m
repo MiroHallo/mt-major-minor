@@ -44,7 +44,6 @@
 close all;
 clearvars;
 addpath(fullfile(pwd, 'MATLAB'));
-clc
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -103,7 +102,7 @@ v1 = V(:, Li(1)); % Eigenvector 1
 v2 = V(:, Li(2)); % Eigenvector 2
 v3 = V(:, Li(3)); % Eigenvector 3
 
-% Major and minor DC MTs
+% Major and Minor DC MTs
 MTmaj = La2*(- v1*v1' + v2*v2'); % Major DC 
 MTmin = La3*(- v1*v1' + v3*v3'); % Minor DC
 
@@ -122,12 +121,17 @@ disp('Minor DC MT (Harvard):')
 disp(num2str(mt_tmp))
 disp(' ')
 
-% Decompose Major and Minor MT
+% Decompose Full, Major, and Minor MTs to DC
+[Dips0,Strikes0,Rakes0,VOL0,CLVD0,DC0,MDev0] = Decomposition(MT3);
 [Dips1,Strikes1,Rakes1,VOL1,CLVD1,DC1,MDev1] = Decomposition(MTmaj);
 [Dips2,Strikes2,Rakes2,VOL2,CLVD2,DC2,MDev2] = Decomposition(MTmin);
 
-% Display Major and Minor DC results
+% Display Full, Major, and Minor DC results
 disp('--------------------------------')
+disp('Input non-DC MT (Strike/Dip/Rake):')
+disp(num2str([Strikes0(1), Dips0(1), Rakes0(1)],'%6.1f '))
+disp(num2str([Strikes0(2), Dips0(2), Rakes0(2)],'%6.1f '))
+disp(' ')
 disp('Major DC (Strike/Dip/Rake):')
 disp(num2str([Strikes1(1), Dips1(1), Rakes1(1)],'%6.1f '))
 disp(num2str([Strikes1(2), Dips1(2), Rakes1(2)],'%6.1f '))
@@ -135,9 +139,6 @@ disp(' ')
 disp('Minor DC (Strike/Dip/Rake):')
 disp(num2str([Strikes2(1), Dips2(1), Rakes2(1)],'%6.1f '))
 disp(num2str([Strikes2(2), Dips2(2), Rakes2(2)],'%6.1f '))
-disp(' ')
-disp('DC percentage of Major and Minor DC MTs:')
-disp([num2str(DC1*100),'% vs ',num2str(DC2*100),'%'] )
 disp(' ')
 
 % Ratio of scalar moments of Major and Minor DC MTs
