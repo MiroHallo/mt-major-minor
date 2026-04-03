@@ -6,22 +6,22 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Method by Hallo et al. (2017, 2019)
+% Author: Miroslav HALLO
+% Charles University in Prague, Faculty of Mathematics and Physics
+% E-mail: hallo@karel.troja.mff.cuni.cz
+% Revision 2017/02: The first version of the function
+% Revision 2018/12: Enhanced version
+% Revision 2026/04: New Matlab version
+% Tested in Matlab R2025b
+% Method:
 % Hallo,M., Asano,K., Gallovic,F. (2017): Bayesian inference and interpretation
 %      of centroid moment tensors of the 2016 Kumamoto earthquake sequence, 
-%      Kyushu, Japan, Earth, Planets and Space, 69:134.
+%      Kyushu, Japan, Earth, Planets and Space, 69:134. 
+%      https://doi.org/10.1186/s40623-017-0721-4
 % Hallo,M., Oprsal,I., Asano,K., Gallovic,F. (2019): Seismotectonics of the 2018
 %      Northern Osaka M6.1 earthquake and its aftershocks: joint movements
 %      on strike-slip and reverse faults in inland Japan, Earth,
-%      Planets and Space, 71:34.
-%
-% Author: Miroslav Hallo
-% Charles University in Prague, Faculty of Mathematics and Physics
-% Web: http://geo.mff.cuni.cz/~hallo/
-% E-mail: hallo@karel.troja.mff.cuni.cz
-% Revision 2/2017: The first version of the function.
-% Revision 12/2018: Enhanced version.
-% Tested in Matlab R2025b
+%      Planets and Space, 71:34. https://doi.org/10.1186/s40623-019-1016-8
 %
 % Copyright (C) 2017,2018 Miroslav Hallo
 %
