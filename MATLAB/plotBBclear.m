@@ -1,6 +1,6 @@
-function plotBB(MTs)
-% Plot beach-ball into the current axes
-% Input is the full Moment Tensor (1x6 vextor Aki & Richards notation)
+function plotBBclear(MTs)
+% PLOTBBCLEAR Plots a beach ball diagram into the current axes.
+% Input is the full Moment Tensor (1x6 vector Aki & Richards notation)
 
 hold on
 Nc = length(MTs(:,1));
