@@ -1,11 +1,11 @@
-# Major and Minor double-couple decomposition of earthquake source
+# Major and Minor double-couple decomposition of earthquake source MT
 Major and Minor double-couple decomposition preserving the dominant PT-axis
 ***************************************
 
-  Codes for decomposition of non-double-couple moment tensors (MTs) with
-preserved dominant P- or T-axis. The dominant axis direction is preserved
-for both the major and minor double-couple MTs. The Python script can be used for
-plotting of the trinity of beach-balls.
+  This tool is intended for decomposition of non-double-couple seismic moment 
+tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction 
+is preserved for both the major and minor double-couple MTs. The Python script can 
+be used for plotting of the trinity of beach-balls.
 
 1 METHODOLOGY
 ===================
@@ -22,7 +22,7 @@ Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://do
 2 TECHNICAL IMPLEMENTATION
 ===================
 
-Matrix Methods, Cross-Platform (Windows, Linux)
+Python 3, Matrix Methods, Cross-Platform (Windows, Linux)
 
 The official software version is archived on Zenodo:
 
@@ -31,20 +31,28 @@ The official software version is archived on Zenodo:
 3 PACKAGE CONTENT
 ===================
 
-  a) "MajMinDC.m" - Matlab codes for computing Major and Minor DC
+  a) "maj_min_dc.m" - Matlab codes for computing Major and Minor DC
   decomposition from a given non-DC MT
   
-  b) "MajMinDC_plot.py" - Python subroutine for plotting and saving
+  b) "plot_maj_min_dc.py" - Python code for plotting and saving
   trinity of beach-balls
+    
+  c) "requirements.txt" - pip requirements file for instalation of dependencies
 
 4 REQUIREMENTS
 ===================
 
-  MATLAB: Version R2016b, Codes do not require any additional Matlab Toolboxes.
+  MATLAB: Version R2025b, Codes do not require any additional Matlab Toolboxes.
   
-  PYTHON: The code was tested and works on both Python 2.7.6 and
-  Python 3.4.3 under Ubuntu 14 operation system (it requires a graphical
-  desktop environment).
+  Python: Version 3.12.3 or higher
+  
+  Libraries: matplotlib, numpy, obspy
+  
+  Install dependencies via pip:
+
+```bash
+pip install -r requirements.txt
+```
   
 5 COPYRIGHT
 ===================
