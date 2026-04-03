@@ -10,7 +10,7 @@
     }
   ],
   "access_right": "open",
-  "license": "GPL-3.0-or-later",
+  "license": "gpl-3.0",
   "keywords": ["Seismology", "Earthquake", "Earthquake Source", "Visualization", "Decomposition", "Tectonics"],
   "related_identifiers": [
     {
@@ -26,8 +26,6 @@
       "resource_type": "publication-article"
     }
   ],
-  "version": "v1.2",
-  "publication_date": "2019-03-27",
   "language": "eng",
   "upload_type": "software"
   }
