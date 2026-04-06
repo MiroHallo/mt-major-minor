@@ -36,92 +36,148 @@
 # 
 # =============================================================================
 
+from dataclasses import dataclass
+
 import matplotlib.pyplot as plt
 import numpy as np
 from obspy.imaging.beachball import beach as bb
+
+# =============================================================================
+# CLASSES
+# =============================================================================
+
+@dataclass
+class TrinityClass:
+    sdr: np.ndarray
+    mt_full: np.ndarray
+    mt_major: np.ndarray
+    mt_minor: np.ndarray
+    ratio_major: float
+    ratio_minor: float
+    facecolor: str = 'red'
 
 # =============================================================================
 # INPUT PARAMETERS
 # =============================================================================
 
 # Strike, Dip, Rake of the Full non-DC moment tensor
-sdr  = np.array([52.4, 76.8, 163.7])
-
 # Full non-DC moment tensor (Harvard, [M11, M22, M33, M12, M13, M23])
-mt  = np.array([[1.1067, 1.5367, -2.6433, 0.26, 0.08, -0.720]])
-
 # Major DC moment tensor (Harvard, [M11, M22, M33, M12, M13, M23])
-mt1 = np.array([[0.21921, 1.4434, -1.6626, 0.58336, -0.035697, -0.52161]])
-
 # Minor DC moment tensor (Harvard, [M11, M22, M33, M12, M13, M23])
-mt2 = np.array([[0.88745, 0.093313, -0.98077, -0.32336, 0.1157, -0.19839]])
-
 # Scalar seismic moment ratio of the Major DC moment tensor
-ra1 = 0.632
-
 # Scalar seismic moment ratio of the Minor DC moment tensor
-ra2 = 0.368
-
 # Color of beach-balls
-facecolor = 'red'
+
+CURRENT_EVENT = TrinityClass(
+    sdr      = np.array([52.4, 76.8, 163.7]),
+    mt_full  = np.array([1.1067, 1.5367, -2.6433, 0.26, 0.08, -0.720]),
+    mt_major = np.array([0.21921, 1.4434, -1.6626, 0.58336, -0.035697, -0.52161]),
+    mt_minor = np.array([0.88745, 0.093313, -0.98077, -0.32336, 0.1157, -0.19839]),
+    ratio_major = 0.632,
+    ratio_minor = 0.368,
+    facecolor = 'red',
+)
+
+# Output filenames
+OUTPUT_FILE_1 = 'input_MT.png'
+OUTPUT_FILE_2 = 'trinity_MT.png'
 
 # =============================================================================
-# CODE
+# FUNCTIONS
 # =============================================================================
-
-# Prepare beach-ball size
-rat = ra1 + ra2
-na1 = ra1/rat * 200
-na2 = ra2/rat * 200
-
-# -----------------------------------------------------------------------------
-# First figure
-outfile = "input_MT.png"
-
-# Plot input non-DC moment tensor
-fig = plt.figure(figsize=(5,5))
-ax = plt.axes()
-plt.axis('off')
-ax.axes.get_xaxis().set_visible(False)
-ax.axes.get_yaxis().set_visible(False)
-lw = 2
-plt.xlim(-100-lw/2, 100+lw/2)
-plt.ylim(-100-lw/2, 100+lw/2)
-na = 200
-full = bb(mt.flatten(), xy=(0, 0), linewidth=lw, facecolor=facecolor, edgecolor='black', zorder=1, width=na)
-ax.add_collection(full)
-dc_lines = bb(sdr, xy=(0, 0), linewidth=lw/5, facecolor='none', edgecolor='black', zorder=2, nofill=True, width=na)
-ax.add_collection(dc_lines)
-
-# Save file
-plt.savefig(outfile, bbox_inches='tight', pad_inches=0)
-plt.close()
-
-# -----------------------------------------------------------------------------
-# Second figure
-outfile = "trinity_MT.png"
 
 # Plot trinity of beach-balls
-fig = plt.figure(figsize=(15,5))
-ax = plt.axes()
-plt.axis('off')
-ax.axes.get_xaxis().set_visible(False)
-ax.axes.get_yaxis().set_visible(False)
-lw=2
-plt.xlim(-100-lw/2, 500+lw/2)
-plt.ylim(-100-lw/2, 100+lw/2)
+def plot_bb_trinity(inp: TrinityClass):
+    """
+    Plot trinity of beach-balls.
 
-full = bb(mt1.flatten(), xy=(0, 0), linewidth=lw, facecolor='black', edgecolor='black', zorder=1, width=na1)
-ax.add_collection(full)
+    Args:
+        inp (TrinityClass): Class containing input parameters for trinity of MTs.
+    Returns:
+        None
+    """
+    # Prepare moment tensors
+    mt0 = inp.mt_full
+    mt1 = inp.mt_major
+    mt2 = inp.mt_minor
+    
+    # Prepare beach-ball size
+    rat = inp.ratio_major + inp.ratio_minor
+    na1 = inp.ratio_major/rat * 200
+    na2 = inp.ratio_minor/rat * 200
 
-full = bb(mt2.flatten(), xy=(200, 0), linewidth=lw, facecolor='black', edgecolor='black', zorder=1, width=na2)
-ax.add_collection(full)
+    # ------------------------------------
+    # Plot input non-DC moment tensor
+    fig = plt.figure(figsize=(5,5))
+    ax = plt.axes()
+    plt.axis('off')
+    ax.axes.get_xaxis().set_visible(False)
+    ax.axes.get_yaxis().set_visible(False)
+    lw = 2
+    plt.xlim(-100-lw/2, 100+lw/2)
+    plt.ylim(-100-lw/2, 100+lw/2)
+    na = 200
+    full = bb(mt0.flatten(), xy=(0, 0), linewidth=lw, facecolor=inp.facecolor,
+              edgecolor='black', zorder=1, width=na)
+    ax.add_collection(full)
+    dc_lines = bb(inp.sdr, xy=(0, 0), linewidth=lw/5, facecolor='none',
+                  edgecolor='black', zorder=2, nofill=True, width=na)
+    ax.add_collection(dc_lines)
 
-full = bb(mt1.flatten()+mt2.flatten(), xy=(400, 0), linewidth=lw, facecolor=facecolor, edgecolor='black', zorder=1)
-ax.add_collection(full)
-dc_lines = bb(sdr, xy=(400, 0), linewidth=lw/5, facecolor='none', edgecolor='black', zorder=2, nofill=True, width=na)
-ax.add_collection(dc_lines)
+    # Save file
+    plt.savefig(OUTPUT_FILE_1, bbox_inches='tight', pad_inches=0)
+    plt.close()
+    print(f"[+] SUCCESS: Saved to '{OUTPUT_FILE_1}'")
 
-# Save file
-plt.savefig(outfile, bbox_inches='tight', pad_inches=0)
-plt.close()
+    # ------------------------------------
+    # Plot trinity of beach-balls
+    fig = plt.figure(figsize=(15,5))
+    ax = plt.axes()
+    plt.axis('off')
+    ax.axes.get_xaxis().set_visible(False)
+    ax.axes.get_yaxis().set_visible(False)
+    lw=2
+    plt.xlim(-100-lw/2, 500+lw/2)
+    plt.ylim(-100-lw/2, 100+lw/2)
+
+    full = bb(mt1.flatten(), xy=(0, 0), linewidth=lw, facecolor='black',
+              edgecolor='black', zorder=1, width=na1)
+    ax.add_collection(full)
+
+    full = bb(mt2.flatten(), xy=(200, 0), linewidth=lw, facecolor='black',
+              edgecolor='black', zorder=1, width=na2)
+    ax.add_collection(full)
+
+    full = bb(mt1.flatten()+mt2.flatten(), xy=(400, 0), linewidth=lw,
+              facecolor=inp.facecolor, edgecolor='black', zorder=1, width=na)
+    ax.add_collection(full)
+    dc_lines = bb(inp.sdr, xy=(400, 0), linewidth=lw/5, facecolor='none',
+                  edgecolor='black', zorder=2, nofill=True, width=na)
+    ax.add_collection(dc_lines)
+
+    # Save file
+    plt.savefig(OUTPUT_FILE_2, bbox_inches='tight', pad_inches=0)
+    plt.close()
+    print(f"[+] SUCCESS: Saved to '{OUTPUT_FILE_2}'")
+
+
+# -----------------------------------------------------------------------------
+# Main function
+def main():
+    """
+    Main function for standalone execution (plot trinity of beach-balls).
+
+    - Read moment tensors and the scalar seismic moment ratio from the CURRENT_EVENT.
+    - Plot trinity of beach-balls.
+    - Save results into the OUTPUT_FILE_1 and OUTPUT_FILE_2.
+    """
+    print("-" * 50)
+    
+    print("[*] Plot trinity of beach-balls")
+    plot_bb_trinity(CURRENT_EVENT)
+
+
+# -----------------------------------------------------------------------------
+# Entry point
+if __name__ == "__main__":
+    main()
