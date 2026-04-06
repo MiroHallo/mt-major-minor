@@ -1,10 +1,10 @@
 # Major and Minor double-couple decomposition of complex earthquake source
-Major and Minor double-couple decomposition preserving the dominant PT-axis
+Major and Minor double-couple decomposition of complex moment tensor preserving dominant PT-axis
 ***************************************
 
   This tool is intended for decomposition of non-double-couple seismic moment 
 tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction 
-is preserved for both the major and minor double-couple MTs. The Python script can 
+is preserved for both the Major and Minor double-couple MTs. The Python script can 
 be used for plotting of the trinity of beach-balls.
 
 1 METHODOLOGY
@@ -33,11 +33,13 @@ The official software version is archived on Zenodo:
 
   a) "maj_min_dc.m" - Matlab codes for computing Major and Minor DC
   decomposition from a given non-DC MT
+
+  b) "example_mt.txt" - Example of input text file with Moment Tensors
   
-  b) "plot_maj_min_dc.py" - Python code for plotting and saving
+  c) "plot_maj_min_dc.py" - Python code for plotting and saving
   trinity of beach-balls
     
-  c) "requirements.txt" - pip requirements file for instalation of dependencies
+  d) "requirements.txt" - pip requirements file for instalation of dependencies
 
 4 REQUIREMENTS
 ===================
