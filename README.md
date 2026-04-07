@@ -57,11 +57,15 @@ pip install -r requirements.txt
 5 EXAMPLE OUTPUT
 ===================
 
-This tool extracts site-specific Vs30 for a set of target Longitude-Latitude 
-pairs from a SQLite database for Japan. Results are automatically saved to a 
-formatted text file.
+This tool extracts Major and Minor sub-sources from a complex seismic source.
+The trinity of beach-balls shows two sub-sources with their sum (complex source mechanism).
+Results are automatically plotted and saved to a formatted text file.
 
-![Trinity of Beach-balls](img/trinity_MT.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="img/trinity_MT_dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="img/trinity_MT_light.png">
+  <img alt="Trinity of Beach-balls" src="img/trinity_MT_light.png">
+</picture>
 
 ```text
 # Input deviatoric MT (Harvard):
