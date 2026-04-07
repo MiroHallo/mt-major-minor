@@ -2,7 +2,7 @@
 Major and Minor double-couple decomposition of complex moment tensor preserving dominant PT-axis
 ***************************************
 
-  This tool is intended for decomposition of non-double-couple seismic moment 
+This tool is intended for decomposition of non-double-couple seismic moment 
 tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction 
 is preserved for both the Major and Minor double-couple MTs. The Python script can 
 be used for plotting of the trinity of beach-balls.
@@ -22,7 +22,7 @@ Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://do
 2 TECHNICAL IMPLEMENTATION
 ===================
 
-Python 3, Matrix Methods, Cross-Platform (Windows, Linux)
+Matrix Methods, Cross-Platform (Windows, Linux), Portable Paths, Robust ASCII input parser, High-resolution image exports
 
 The official software version is archived on Zenodo:
 
@@ -31,13 +31,10 @@ The official software version is archived on Zenodo:
 3 PACKAGE CONTENT
 ===================
 
-  a) "maj_min_dc.m" - Matlab code for computing Major and Minor decomposition
-
-  b) "example_mt.txt" - Example of input text file with Moment Tensors
-  
-  c) "plot_maj_min_dc.py" - Python code for plotting trinity of beach-balls
-    
-  d) "requirements.txt" - pip requirements file for instalation of dependencies
+  1. `maj_min_dc.m` - Decomposition of seismic moment tensors into Major and Minor sub-sources
+  2. `example_mt.txt` - Example of text file with input moment tensors
+  3. `plot_maj_min_dc.py` - Python code for plotting trinity of beach-balls
+  4. `requirements.txt` - pip requirements file for instalation of dependencies
 
 4 REQUIREMENTS
 ===================
@@ -54,7 +51,17 @@ The official software version is archived on Zenodo:
 pip install -r requirements.txt
 ```
 
-5 EXAMPLE OUTPUT
+5 USAGE
+===================
+
+  1. Prepare your `example_mt.txt` input file (Moment tensors in Harvard notation)
+  2. Open MATLAB
+  3. Run the main script: `example_mt.txt`
+  4. Check the `/results` folder for high-resolution outputs
+  5. Set and run the python tool: `python plot_maj_min_dc.py`
+  6. Check for high-resolution outputs from python tool
+  
+6 EXAMPLE OUTPUT
 ===================
 
 This tool extracts Major and Minor sub-sources from a complex seismic source.
@@ -87,7 +94,7 @@ Results are automatically plotted and saved.
 0.63217  0.36783
 ```
 
-6 COPYRIGHT
+7 COPYRIGHT
 ===================
 
 Copyright (C) 2017,2018 Miroslav Hallo
