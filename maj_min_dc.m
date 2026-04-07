@@ -77,12 +77,10 @@ total = length(mtlist{1,1});
 % For each event
 for eve = 1:total
     % Full Moment Tensor
-    MT(1) = mtlist{1,1}(eve);
-    MT(2) = mtlist{1,2}(eve);
-    MT(3) = mtlist{1,3}(eve);
-    MT(4) = mtlist{1,4}(eve);
-    MT(5) = mtlist{1,5}(eve);
-    MT(6) = mtlist{1,6}(eve);
+    MT = zeros(1,6);
+    for k = 1:6
+        MT(k) = mtlist{1,k}(eve);
+    end
 
     % Text label
     eve_name = mtlist{1,7}{eve};
@@ -98,7 +96,7 @@ for eve = 1:total
     % Figure of full input MT
     figure('color','w')
     plotBB(MTa);
-    title('Input full MT')
+    title('Input full MT', 'FontWeight', 'normal')
     axis equal
     axis off
 
@@ -121,7 +119,7 @@ for eve = 1:total
     % Figure of input deviatoric MT
     figure('color','w')
     plotBB([MT3(1,1), MT3(2,2), MT3(3,3), MT3(1,2), MT3(1,3), MT3(2,3)]);
-    title('Input deviatoric MT')
+    title('Input deviatoric MT', 'FontWeight', 'normal')
     axis equal
     axis off
 
@@ -225,7 +223,7 @@ for eve = 1:total
     figure('color','w')
     subplot(1,3,1)
     bb([Strikes1(1) Dips1(1) Rakes1(1)], 0.5, 0.5, Cdc1/2, 0, 'k')
-    title('Major DC')
+    title('Major DC', 'FontWeight', 'normal')
     axis equal
     set(gca,'XLim',[0 1])
     set(gca,'YLim',[0 1])
@@ -233,7 +231,7 @@ for eve = 1:total
 
     subplot(1,3,2)
     bb([Strikes2(1) Dips2(1) Rakes2(1)], 0.5, 0.5, Cdc2/2, 0, 'k')
-    title('Minor DC')
+    title('Minor DC', 'FontWeight', 'normal')
     axis equal
     set(gca,'XLim',[0 1])
     set(gca,'YLim',[0 1])
@@ -241,7 +239,7 @@ for eve = 1:total
 
     subplot(1,3,3)
     plotBBclear([MT3(1,1),MT3(2,2),MT3(3,3),MT3(1,2),MT3(1,3),MT3(2,3)]);
-    title('Deviatoric non-DC')
+    title('Deviatoric non-DC', 'FontWeight', 'normal')
     axis equal
     axis off
 
