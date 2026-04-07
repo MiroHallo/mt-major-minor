@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 This tool extracts Major and Minor sub-sources from a complex seismic source.
 The trinity of beach-balls shows two sub-sources with their sum (complex source mechanism).
-Results are automatically plotted and saved to a formatted text file.
+Results are automatically plotted and saved.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="img/trinity_MT_dark.png">
