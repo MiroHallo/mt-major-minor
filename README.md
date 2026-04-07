@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
   1. Prepare your `example_mt.txt` input file (Moment tensors in Harvard notation)
   2. Open MATLAB
-  3. Run the main script: `example_mt.txt`
+  3. Run the main script: `maj_min_dc.m`
   4. Check the `/results` folder for high-resolution outputs
   5. Set and run the python tool: `python plot_maj_min_dc.py`
   6. Check for high-resolution outputs from python tool
