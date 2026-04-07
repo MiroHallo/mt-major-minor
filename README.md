@@ -31,13 +31,11 @@ The official software version is archived on Zenodo:
 3 PACKAGE CONTENT
 ===================
 
-  a) "maj_min_dc.m" - Matlab codes for computing Major and Minor DC
-  decomposition from a given non-DC MT
+  a) "maj_min_dc.m" - Matlab code for computing Major and Minor decomposition
 
   b) "example_mt.txt" - Example of input text file with Moment Tensors
   
-  c) "plot_maj_min_dc.py" - Python code for plotting and saving
-  trinity of beach-balls
+  c) "plot_maj_min_dc.py" - Python code for plotting trinity of beach-balls
     
   d) "requirements.txt" - pip requirements file for instalation of dependencies
 
@@ -46,7 +44,7 @@ The official software version is archived on Zenodo:
 
   MATLAB: Version R2025b, Codes do not require any additional Matlab Toolboxes.
   
-  Python: Version 3.12.3 or higher
+  Python: Version 3.12 or higher
   
   Libraries: matplotlib, numpy, obspy
   
@@ -55,8 +53,37 @@ The official software version is archived on Zenodo:
 ```bash
 pip install -r requirements.txt
 ```
-  
-5 COPYRIGHT
+
+5 EXAMPLE OUTPUT
+===================
+
+This tool extracts site-specific Vs30 for a set of target Longitude-Latitude 
+pairs from a SQLite database for Japan. Results are automatically saved to a 
+formatted text file.
+
+![Trinity of Beach-balls](img/trinity_MT.png)
+
+```text
+# Input deviatoric MT (Harvard):
+ 1.106667   1.536667  -2.643333   0.260000   0.080000  -0.720000
+# Major DC MT (Harvard):
+ 0.219212   1.443353  -1.662566   0.583364  -0.035697  -0.521606
+# Minor DC MT (Harvard):
+ 0.887454   0.093313  -0.980768  -0.323364   0.115697  -0.198394
+# Input deviatoric MT (Strike/Dip/Rake):
+146.20   74.12   13.77
+ 52.36   76.76  163.68
+# Major DC (Strike/Dip/Rake):
+ 52.36   76.76  163.68
+146.20   74.12   13.77
+# Minor DC (Strike/Dip/Rake):
+209.73   46.93  119.11
+350.54   50.34   62.51
+# Scalar seismic moment ratio of Major and Minor DC MTs:
+0.63217  0.36783
+```
+
+6 COPYRIGHT
 ===================
 
 Copyright (C) 2017,2018 Miroslav Hallo
