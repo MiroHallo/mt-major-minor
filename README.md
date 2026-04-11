@@ -36,10 +36,20 @@ The official software version is archived on Zenodo:
   3. `plot_maj_min_dc.py` - Python code for plotting trinity of beach-balls
   4. `requirements.txt` - pip requirements file for instalation of dependencies
 
-4 REQUIREMENTS
+4 RELEASE HISTORY (MAJOR VERSIONS)
 ===================
 
-  MATLAB: Version R2025b, Codes do not require any additional Matlab Toolboxes.
+*   **2.0 — Refactored Release** | April 2026
+    *   Modernization: Fully ported to MATLAB R2025b with industry-standard directory structure
+    *   UX/I-O: Robust ASCII parser, intuitive variable naming, and refined graphical reports
+
+*   **1.3 — Initial Release** | March 2019
+    *   Core implementation used by paper published in Earth, Planets and Space (Hallo et al., 2019)
+
+5 REQUIREMENTS
+===================
+
+  MATLAB: Version R2025b, Codes do not require any additional Matlab Toolboxes
   
   Python: Version 3.12 or higher
   
@@ -51,7 +61,7 @@ The official software version is archived on Zenodo:
 pip install -r requirements.txt
 ```
 
-5 USAGE
+6 USAGE
 ===================
 
   1. Prepare your `example_mt.txt` input file (Moment tensors in Harvard notation)
@@ -61,7 +71,7 @@ pip install -r requirements.txt
   5. Set and run the python tool: `python plot_maj_min_dc.py`
   6. Check for high-resolution outputs from python tool
   
-6 EXAMPLE OUTPUT
+7 EXAMPLE OUTPUT
 ===================
 
 This tool extracts Major and Minor sub-sources from a complex seismic source.
@@ -94,7 +104,7 @@ Results are automatically plotted and saved.
 0.63217  0.36783
 ```
 
-7 COPYRIGHT
+8 COPYRIGHT
 ===================
 
 Copyright (C) 2017,2018 Miroslav Hallo
