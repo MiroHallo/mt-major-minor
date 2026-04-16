@@ -22,7 +22,9 @@ Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://do
 2 TECHNICAL IMPLEMENTATION
 ===================
 
-Matrix Methods, Cross-Platform (Windows, Linux), Portable Paths, Robust ASCII input parser, High-resolution image exports
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
+
+Matrix Methods, Cross-Platform (Windows, Linux, macOS), Portable Paths, Robust ASCII input parser, High-resolution image exports
 
 The official software version is archived on Zenodo:
 
