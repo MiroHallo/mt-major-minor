@@ -1,26 +1,28 @@
 # Major and Minor double-couple decomposition of complex earthquake source
-Major and Minor double-couple decomposition of complex moment tensor preserving dominant PT-axis
-***************************************
+
+Major and Minor double-couple decomposition of complex moment tensor preserving dominant PT-axis.
+
+---
 
 This tool is intended for decomposition of non-double-couple seismic moment 
 tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction 
 is preserved for both the Major and Minor double-couple MTs. The Python script can 
 be used for plotting of the trinity of beach-balls.
 
-1 METHODOLOGY
-===================
+## 1 METHODOLOGY
 
-  Hallo, M., Asano, K., Gallovič, F. (2017). Bayesian inference and
+The suite uses theory by Hallo et al. (2017, 2019).
+
+  Hallo, M., Asano, K., Gallovic, F. (2017). Bayesian inference and
 interpretation of centroid moment tensors of the 2016 Kumamoto earthquake
 sequence, Kyushu, Japan, Earth, Planets and Space, 69:134. [https://doi.org/10.1186/s40623-017-0721-4](https://doi.org/10.1186/s40623-017-0721-4)
 
-  Hallo, M., Opršal, I., Asano, K., Gallovič, F. (2019). Seismotectonics
+  Hallo, M., Oprsal, I., Asano, K., Gallovic, F. (2019). Seismotectonics
 of the 2018 Northern Osaka M6.1 earthquake and its aftershocks: joint
 movements on strike-slip and reverse faults in inland Japan, Earth,
 Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://doi.org/10.1186/s40623-019-1016-8)
 
-2 TECHNICAL IMPLEMENTATION
-===================
+## 2 TECHNICAL IMPLEMENTATION
 
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 
@@ -30,16 +32,14 @@ The official software version is archived on Zenodo:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19342063.svg)](https://doi.org/10.5281/zenodo.19342063)
 
-3 PACKAGE CONTENT
-===================
+## 3 PACKAGE CONTENT
 
-  1. `maj_min_dc.m` - Decomposition of seismic moment tensors into Major and Minor sub-sources
-  2. `example_mt.txt` - Example of text file with input moment tensors
-  3. `plot_maj_min_dc.py` - Python code for plotting trinity of beach-balls
-  4. `requirements.txt` - pip requirements file for instalation of dependencies
+1. `maj_min_dc.m` - Decomposition of seismic moment tensors into Major and Minor sub-sources
+2. `example_mt.txt` - Example of text file with input moment tensors
+3. `plot_maj_min_dc.py` - Python code for plotting trinity of beach-balls
+4. `requirements.txt` - pip requirements file for instalation of dependencies
 
-4 RELEASE HISTORY (MAJOR VERSIONS)
-===================
+## 4 RELEASE HISTORY (MAJOR VERSIONS)
 
 *   **2.0 — Refactored Release** | April 2026
     *   Modernization: Fully ported to MATLAB R2025b with industry-standard directory structure
@@ -48,8 +48,7 @@ The official software version is archived on Zenodo:
 *   **1.3 — Initial Release** | March 2019
     *   Core implementation used by paper published in Earth, Planets and Space (Hallo et al., 2019)
 
-5 REQUIREMENTS
-===================
+## 5 REQUIREMENTS
 
   MATLAB: Version R2025b, Codes do not require any additional Matlab Toolboxes
   
@@ -63,18 +62,16 @@ The official software version is archived on Zenodo:
 pip install -r requirements.txt
 ```
 
-6 USAGE
-===================
+## 6 USAGE
 
-  1. Prepare your `example_mt.txt` input file (Moment tensors in Harvard notation)
-  2. Open MATLAB
-  3. Run the main script: `maj_min_dc.m`
-  4. Check the `/results` folder for high-resolution outputs
-  5. Set and run the python tool: `python plot_maj_min_dc.py`
-  6. Check for high-resolution outputs from python tool
+1. Prepare your `example_mt.txt` input file (Moment tensors in Harvard notation)
+2. Open MATLAB
+3. Run the main script: `maj_min_dc.m`
+4. Check the `/results` folder for high-resolution outputs
+5. Set and run the python tool: `python plot_maj_min_dc.py`
+6. Check for high-resolution outputs from python tool
   
-7 EXAMPLE OUTPUT
-===================
+## 7 EXAMPLE OUTPUT
 
 This tool extracts Major and Minor sub-sources from a complex seismic source.
 The trinity of beach-balls shows two sub-sources with their sum (complex source mechanism).
@@ -106,10 +103,9 @@ Results are automatically plotted and saved.
 0.63217  0.36783
 ```
 
-8 COPYRIGHT
-===================
+## 8 COPYRIGHT
 
-Copyright (C) 2017,2018 Miroslav Hallo
+Copyright (C) 2017,2018,2026 Miroslav Hallo
 
 This program is published under the GNU General Public License (GNU GPL).
 
@@ -122,5 +118,17 @@ This code is distributed in the hope that it will be useful, but WITHOUT
 ANY WARRANTY. We would like to kindly ask you to acknowledge the authors
 and don't remove their names from the code.
 
-You should have received copy of the GNU General Public License along
+You should have received a copy of the GNU General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
+
+## 9 CITE AS
+
+If you use this tools suite, please cite both the original methodology papers (preferred) and the software version as follows:
+
+### For the methodology and implementation:
+> Hallo, M., Asano, K., Gallovic, F. (2017). Bayesian inference and interpretation of centroid moment tensors of the 2016 Kumamoto earthquake sequence, Kyushu, Japan. Earth, Planets and Space, 69:134. [https://doi.org/10.1186/s40623-017-0721-4](https://doi.org/10.1186/s40623-017-0721-4)
+
+> Hallo, M., Oprsal, I., Asano, K., Gallovic, F. (2019). Seismotectonics of the 2018 Northern Osaka M6.1 earthquake and its aftershocks: joint movements on strike-slip and reverse faults in inland Japan. Earth, Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://doi.org/10.1186/s40623-019-1016-8)
+
+### For the specific software version:
+> Hallo, M. (2026). Major and Minor decomposition of non-DC earthquake source (v2.2.2) [Software]. Zenodo. [https://doi.org/10.5281/zenodo.19342063](https://doi.org/10.5281/zenodo.19342063)
