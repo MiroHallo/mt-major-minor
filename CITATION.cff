@@ -1,0 +1,67 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Hallo"
+    given-names: "Miroslav"
+    orcid: "https://orcid.org/0000-0001-5865-7767"
+title: "Major and Minor decomposition of non-DC earthquake source"
+abstract: "Code for decomposition of non-double-couple moment tensors (MTs) with preserved dominant P- or T-axis. The dominant axis direction is preserved for both the major and minor double-couple MTs. The Python script can be used for plotting of the trinity of beach-balls."
+version: "2.2.2"
+doi: "10.5281/zenodo.19342063"
+date-released: "2026-04-20"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/MiroHallo/mt-major-minor"
+keywords:
+  - "seismology"
+  - "earthquake source"
+  - "focal mechanism"
+  - "decomposition"
+  - "moment tensor"
+  - "non-double-couple"
+  - "tectonics"
+
+# -------------------------------------------------------------------
+# Preferred citation for GitHub
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Hallo"
+      given-names: "Miroslav"
+      orcid: "https://orcid.org/0000-0001-5865-7767"
+    - family-names: "Asano"
+      given-names: "Kimiyuki"
+      orcid: "https://orcid.org/0000-0002-8530-4198"
+    - family-names: "Gallovic"
+      given-names: "Frantisek"
+      orcid: "https://orcid.org/0000-0002-9268-3923"
+  title: "Bayesian inference and interpretation of centroid moment tensors of the 2016 Kumamoto earthquake sequence, Kyushu, Japan"
+  journal: "Earth, Planets and Space"
+  year: 2017
+  volume: "69"
+  issue: "134"
+  doi: "10.1186/s40623-017-0721-4"
+
+# -------------------------------------------------------------------
+# Other citations
+references:
+  - type: article
+    authors:
+      - family-names: "Hallo"
+        given-names: "Miroslav"
+        orcid: "https://orcid.org/0000-0001-5865-7767"
+      - family-names: "Oprsal"
+        given-names: "Ivo"
+      - family-names: "Asano"
+        given-names: "Kimiyuki"
+        orcid: "https://orcid.org/0000-0002-8530-4198"
+      - family-names: "Gallovic"
+        given-names: "Frantisek"
+        orcid: "https://orcid.org/0000-0002-9268-3923"
+    title: "Seismotectonics of the 2018 Northern Osaka M6.1 earthquake and its aftershocks: joint movements on strike-slip and reverse faults in inland Japan"
+    journal: "Earth, Planets and Space"
+    year: 2019
+    volume: "71"
+    issue: "34"
+    doi: "10.1186/s40623-019-1016-8"
+
