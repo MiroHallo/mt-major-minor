@@ -2,6 +2,14 @@
 
 Major and Minor double-couple decomposition of complex moment tensor preserving dominant PT-axis.
 
+<a href="#cite"><img src="https://img.shields.io/badge/CITE%20AS-grey?style=flat" alt="Cite As"></a>
+[![PAPER](https://img.shields.io/badge/PAPER-10.1186%2Fs40623--017--0721--4-%23007EC6?style=flat)](https://doi.org/10.1186/s40623-017-0721-4)
+[![SOFTWARE](https://img.shields.io/badge/SOFTWARE-10.5281%2Fzenodo.19342063-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19342063)
+
+![MATLAB](https://img.shields.io/badge/MATLAB-%23ED7D31?style=flat)
+![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat)](https://www.python.org/dev/peps/pep-0008/)
+
 ---
 
 This tool is intended for decomposition of non-double-couple seismic moment 
@@ -24,13 +32,12 @@ Planets and Space, 71:34. [https://doi.org/10.1186/s40623-019-1016-8](https://do
 
 ## 2 TECHNICAL IMPLEMENTATION
 
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-
-Matrix Methods, Cross-Platform (Windows, Linux, macOS), Portable Paths, Robust ASCII input parser, High-resolution image exports
-
-The official software version is archived on Zenodo:
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19342063.svg)](https://doi.org/10.5281/zenodo.19342063)
+*  MATLAB, Python3
+*  Matrix Methods
+*  Cross-Platform (Windows, Linux, macOS)
+*  Portable Paths
+*  Robust ASCII input parser
+*  High-resolution image exports
 
 ## 3 PACKAGE CONTENT
 
@@ -121,6 +128,7 @@ and don't remove their names from the code.
 You should have received a copy of the GNU General Public License along
 with this program. If not, see <http://www.gnu.org/licenses/>.
 
+<a name="cite"></a>
 ## 9 CITE AS
 
 If you use this tools suite, please cite both the original methodology papers (preferred) and the software version as follows:
