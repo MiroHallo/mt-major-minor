@@ -8,7 +8,7 @@ Major and Minor double-couple decomposition of complex moment tensor preserving 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-%23ED7D31?style=flat)
 ![Python](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
-[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat&labelColor=%233776AB)](https://www.python.org/dev/peps/pep-0008/)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat)](https://www.python.org/dev/peps/pep-0008/)
 
 ---
 
