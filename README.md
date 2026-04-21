@@ -7,7 +7,7 @@ Major and Minor double-couple decomposition of complex moment tensor preserving 
 [![SOFTWARE](https://img.shields.io/badge/SOFTWARE-10.5281%2Fzenodo.19342063-%23007EC6?style=flat)](https://doi.org/10.5281/zenodo.19342063)
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-%23ED7D31?style=flat)
-![Python](https://img.shields.io/badge/python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
+![Python](https://img.shields.io/badge/Python-%233776AB?style=flat&logo=python&logoColor=white)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-brightgreen?style=flat)](https://www.python.org/dev/peps/pep-0008/)
 
 ---
