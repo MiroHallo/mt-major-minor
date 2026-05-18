@@ -83,19 +83,19 @@ This repository is designed for production-grade automation. If you run scripts 
 
 **MATLAB - Windows & Linux (Bash / PowerShell):**
 ```bash
-matlab -nodisplay -nosplash -nodesktop -r "run('your_script.m'); exit;"
+matlab -nodisplay -nosplash -nodesktop -r "run('maj_min_dc.m'); exit;"
 ```
 
 **Python - Linux / macOS (Bash):**
 ```bash
 export MPLBACKEND=Agg
-python vvv.py
+python plot_maj_min_dc.py
 ```
 
 **Python - Windows (PowerShell):**
 ```powershell
 $env:MPLBACKEND="Agg"
-python vvv.py
+python plot_maj_min_dc.py
 ```
   
 ## 7 EXAMPLE OUTPUT
