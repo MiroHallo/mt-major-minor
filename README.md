@@ -79,25 +79,10 @@ pip install -r requirements.txt
 6. Check for high-resolution outputs from python tool
 
 ### Server Execution
-If you run scripts on a server without a graphical user interface (e.g., Linux cluster, Docker container, or cloud instance), you need to use the `-nodisplay` flag for MATLAB and set the backend to `Agg` for Python to avoid a "no display" error.
+If you run scripts on a server without a graphical user interface (e.g., Linux cluster, Docker container, or cloud instance), you need to:
+* **MATLAB:** Run with `matlab -nodisplay -nosplash -nodesktop -r "run('maj_min_dc.m'); exit;"`
+* **Python:** Set `export MPLBACKEND=Agg` (Linux)  or `$env:MPLBACKEND="Agg"` (Windows) before execution
 
-**MATLAB — Windows & Linux (Bash / PowerShell):**
-```bash
-matlab -nodisplay -nosplash -nodesktop -r "run('maj_min_dc.m'); exit;"
-```
-
-**Python — Linux / macOS (Bash):**
-```bash
-export MPLBACKEND=Agg
-python plot_maj_min_dc.py
-```
-
-**Python — Windows (PowerShell):**
-```powershell
-$env:MPLBACKEND="Agg"
-python plot_maj_min_dc.py
-```
-  
 ## 7 EXAMPLE OUTPUT
 
 This tool extracts Major and Minor sub-sources from a complex seismic source.
