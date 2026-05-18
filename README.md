@@ -77,6 +77,26 @@ pip install -r requirements.txt
 4. Check the `/results` folder for high-resolution outputs
 5. Set and run the python tool: `python plot_maj_min_dc.py`
 6. Check for high-resolution outputs from python tool
+
+### Server Execution (Headless Environments)
+This repository is designed for production-grade automation. If you run scripts on a server without a graphical user interface GUI (e.g., Linux cluster, Docker container, or cloud instance), you need to use the `-nodisplay` flag for MATLAB and set the backend to `Agg` for Python to avoid a "no display" error.
+
+**MATLAB - Windows & Linux (Bash / PowerShell):**
+```bash
+matlab -nodisplay -nosplash -nodesktop -r "run('your_script.m'); exit;"
+```
+
+**Python - Linux / macOS (Bash):**
+```bash
+export MPLBACKEND=Agg
+python vvv.py
+```
+
+**Python - Windows (PowerShell):**
+```powershell
+$env:MPLBACKEND="Agg"
+python vvv.py
+```
   
 ## 7 EXAMPLE OUTPUT
 
