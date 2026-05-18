@@ -95,7 +95,7 @@ def plot_bb_trinity(inp: TrinityClass):
     Plot trinity of beach-balls.
 
     Args:
-        inp (TrinityClass): Sontains input parameters for trinity of MTs.
+        inp (TrinityClass): Contains input parameters for trinity of MTs.
     Returns:
         None
     """
