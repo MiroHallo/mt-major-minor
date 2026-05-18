@@ -79,7 +79,7 @@ pip install -r requirements.txt
 6. Check for high-resolution outputs from python tool
 
 ### Server Execution (Headless Environments)
-This repository is designed for production-grade automation. If you run scripts on a server without a graphical user interface GUI (e.g., Linux cluster, Docker container, or cloud instance), you need to use the `-nodisplay` flag for MATLAB and set the backend to `Agg` for Python to avoid a "no display" error.
+If you run scripts on a server without a graphical user interface (e.g., Linux cluster, Docker container, or cloud instance), you need to use the `-nodisplay` flag for MATLAB and set the backend to `Agg` for Python to avoid a "no display" error.
 
 **MATLAB - Windows & Linux (Bash / PowerShell):**
 ```bash
