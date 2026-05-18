@@ -79,7 +79,7 @@ pip install -r requirements.txt
 6. Check for high-resolution outputs from python tool
 
 ### Server Execution
-If you run scripts on a server without a graphical user interface (e.g., Linux cluster, Docker container, or cloud instance), you need to:
+If you run scripts on a server without a graphical user interface (e.g., Linux cluster, Docker container, or cloud instance):
 * **MATLAB:** Run with `matlab -nodisplay -nosplash -nodesktop -r "run('maj_min_dc.m'); exit;"`
 * **Python:** Set `export MPLBACKEND=Agg` (Linux)  or `$env:MPLBACKEND="Agg"` (Windows) before execution
 
